@@ -40,38 +40,57 @@ noremap <F5> <ESC>:set filetype=html<ENTER>
 noremap <F6> <ESC>:set filetype=css<ENTER>
 noremap <F7> <ESC>:set filetype=javascript<ENTER>
 
+"map启动key
+let mapleader = ";"
+
+"寄存器map
+vnoremap <leader>y "ay
+noremap <leader>p "ap
+
+"快速标记map
+noremap <leader>m mc
+noremap <leader>' 'c
+
+"配对map
 inoremap ' ''<esc>i
 inoremap " ""<esc>i
 inoremap { {}<esc>i
 inoremap ( ()<esc>i
+inoremap [ []<esc>i
+vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
+vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
+vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
+vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 
-inoremap ;< &lt;<esc>a
-inoremap ;> &gt;<esc>a
-inoremap ;nb &nbsp;<esc>a
+"字符实体map
+inoremap <leader>< &lt;<esc>a
+inoremap <leader>> &gt;<esc>a
+inoremap <leader>nb &nbsp;<esc>a
 
-inoremap ;h1 <h1></h1><esc>4hi
-inoremap ;h2 <h2></h2><esc>4hi
-inoremap ;h3 <h3></h3><esc>4hi
-inoremap ;h4 <h4></h4><esc>4hi
-inoremap ;h5 <h5></h5><esc>4hi
-inoremap ;h6 <h6></h6><esc>4hi
-inoremap ;html <html><CR><head></head><CR><body><body><CR></html><esc>ki
-inoremap ;link <link rel="stylesheet" type="text/css" href=""><esc>hi
-inoremap ;meta <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-inoremap ;script <script></script><esc>8hi
-inoremap ;div <div></div><esc>5hi
-inoremap ;code <code></code><esc>6hi
-inoremap ;button <button></button><esc>8hi
-inoremap ;a <a href=""></a><esc>3hi
-inoremap ;span <span></span><esc>6hi
-inoremap ;pre <pre></pre><esc>5hi
-inoremap ;code <code></code><esc>6hi
-inoremap ;input <input name=""><esc>hi
-inoremap ;br </br><esc>a
+"标签mapk
+inoremap <leader> h1 <h1></h1><esc>4hi
+inoremap <leader> h2 <h2></h2><esc>4hi
+inoremap <leader> h3 <h3></h3><esc>4hi
+inoremap <leader> h4 <h4></h4><esc>4hi
+inoremap <leader> h5 <h5></h5><esc>4hi
+inoremap <leader> h6 <h6></h6><esc>4hi
+inoremap <leader> html <html><CR><head></head><CR><body><body><CR></html><esc>ki
+inoremap <leader> link <link rel="stylesheet" type="text/css" href=""><esc>hi
+inoremap <leader> meta <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+inoremap <leader> script <script></script><esc>8hi
+inoremap <leader> div <div></div><esc>5hi
+inoremap <leader> code <code></code><esc>6hi
+inoremap <leader> button <button></button><esc>8hi
+inoremap <leader> a <a href=""></a><esc>3hi
+inoremap <leader> span <span></span><esc>6hi
+inoremap <leader> pre <pre></pre><esc>5hi
+inoremap <leader> code <code></code><esc>6hi
+inoremap <leader> input <input name=""><esc>hi
+inoremap <leader> br </br><esc>a
 
-inoremap ;cl class=""<esc>i
+inoremap <leader> cl class=""<esc>i
 
-inoremap ;fn function(){<CR><CR>}<esc>ki<tab>
+inoremap <leader> fn function(){<CR><CR>}<esc>ki<tab>
 
 "colorscheme Desert
 colorscheme peachpuff
