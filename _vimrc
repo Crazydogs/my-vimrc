@@ -17,7 +17,6 @@ filetype plugin on
 
 "配对扩展
 runtime macros/matchit.vim
-
 "文件名查找后缀
 set suffixesadd+=.js
 
@@ -44,6 +43,9 @@ set hlsearch
 set cc=80
 "按缩进折叠
 set fdm=indent
+
+"命令行模式展开当前文件目录
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 "一些map
 noremap <F2> <HOME>i//<ESC>
