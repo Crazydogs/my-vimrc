@@ -41,7 +41,7 @@ noremap <F6> <ESC>:set filetype=css<ENTER>
 noremap <F7> <ESC>:set filetype=javascript<ENTER>
 
 "map启动key
-let mapleader = ";"
+"let mapleader = ";"
 
 "寄存器map
 vnoremap <leader>y "ay
